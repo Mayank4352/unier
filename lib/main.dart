@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:unier/utils/routes.dart';
 import 'package:unier/theme/themes.dart';
 import 'package:unier/view/screen/chat_screen.dart';
 
@@ -20,7 +19,6 @@ class MyApp extends StatelessWidget {
       darkTheme: Themes.getDarkTheme(),
       themeMode: ThemeMode.dark,
       home: const ChatScreen(),
-      routes: {},
     );
   }
 }
