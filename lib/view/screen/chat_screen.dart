@@ -76,6 +76,21 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     // ref.read(chatsProvider.notifier).addMessage(Messages('Hello', false));
 
     return Scaffold(
+      appBar: AppBar(
+        title: Row(
+          children: [
+            CircleAvatar(
+              radius: 20,
+              backgroundImage: NetworkImage(
+                  "https://i.pinimg.com/474x/0a/a8/58/0aa8581c2cb0aa948d63ce3ddad90c81.jpg"),
+            ),
+            SizedBox(
+              width: 20,
+            ),
+            Text("Demo"),
+          ],
+        ),
+      ),
       body: Column(
         children: [
           Expanded(
@@ -188,7 +203,10 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               //await speechService!.dispose();
             }
           },
-          child: const Icon(Icons.mic),
+          child: const Icon(
+            Icons.mic,
+            color: Colors.white,
+          ),
         ),
       ),
     );

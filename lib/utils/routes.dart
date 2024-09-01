@@ -1,5 +1,5 @@
 AppRoutes appRoutes = AppRoutes();
 
 class AppRoutes {
-  String otpScreen = 'otpScreen';
+  String chatScreen = 'chatScreen';
 }

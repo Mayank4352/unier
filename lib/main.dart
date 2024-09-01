@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:unier/theme/themes.dart';
+import 'package:unier/utils/routes.dart';
 import 'package:unier/view/screen/chat_screen.dart';
+import 'package:unier/view/screen/home_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const ProviderScope(child: MyApp()));
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -18,7 +21,10 @@ class MyApp extends StatelessWidget {
       theme: Themes.getLightTheme(),
       darkTheme: Themes.getDarkTheme(),
       themeMode: ThemeMode.dark,
-      home: const ChatScreen(),
+      home: const HomeScreen(),
+      routes: {
+         appRoutes.chatScreen: (context) => const ChatScreen(),
+      },
     );
   }
 }
