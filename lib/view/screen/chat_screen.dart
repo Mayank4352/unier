@@ -25,6 +25,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   TextEditingController textController = TextEditingController();
   SpeechService? speechService;
   bool isListening = false;
+  bool isSpeaking = false;
   FlutterTts flutterTts = FlutterTts();
   Future speak(String text) async {
     var result = await flutterTts.speak(text);
@@ -73,7 +74,6 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     List<Messages> chat = ref.watch(chatsProvider);
-    // ref.read(chatsProvider.notifier).addMessage(Messages('Hello', false));
 
     return Scaffold(
       appBar: AppBar(
@@ -143,17 +143,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                       chatScrollController.jumpTo(
                           chatScrollController.position.maxScrollExtent);
                       log('Start Speaking');
-                      if (isListening) {
-                        await speechService!.stop().then((call) async {
-                          await speak(textFieldController.text)
-                              .then((call) async {
-                            await speechService!.start();
-                          });
-                        });
-                      } else {
-                        await speak(textFieldController.text);
-                      }
-
+                      // if (isListening) speechService!.stop();
+                      isSpeaking = true;
+                      setState(() {});
+                      await speak(textFieldController.text).whenComplete(() {
+                        isSpeaking = false;
+                        setState(() {});
+                      });
+                      //if (isListening) speechService!.start();
                       textFieldController.clear();
                     }
                   },
@@ -174,18 +171,21 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               setState(() {});
               String prev = '';
               speechService!.onPartial().forEach((partial) {
-                Map<String, dynamic> map = jsonDecode(partial);
-                if (map['partial'] != "") {
-                  prev = map['partial'];
-                } else if (prev != "") {
-                  ref
-                      .read(chatsProvider.notifier)
-                      .addMessage(Messages(prev, false));
-                  prev = '';
-                }
+                if (!isSpeaking) {
+                  Map<String, dynamic> map = jsonDecode(partial);
 
-                log(map.toString());
-                setState(() {});
+                  if (map['partial'] != "") {
+                    prev = map['partial'];
+                  } else if (prev != "") {
+                    ref
+                        .read(chatsProvider.notifier)
+                        .addMessage(Messages(prev, false));
+                    prev = '';
+                  }
+
+                  log(map.toString());
+                  setState(() {});
+                }
               });
               speechService!.onResult().forEach((result) => () {
                     Map<String, dynamic> map = jsonDecode(result);
