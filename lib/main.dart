@@ -10,7 +10,6 @@ void main() {
   runApp(const ProviderScope(child: MyApp()));
 }
 
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -22,8 +21,9 @@ class MyApp extends StatelessWidget {
       darkTheme: Themes.getDarkTheme(),
       themeMode: ThemeMode.dark,
       home: const HomeScreen(),
+      debugShowCheckedModeBanner: false,
       routes: {
-         appRoutes.chatScreen: (context) => const ChatScreen(),
+        appRoutes.chatScreen: (context) => const ChatScreen(),
       },
     );
   }

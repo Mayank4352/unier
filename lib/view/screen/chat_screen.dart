@@ -82,10 +82,10 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
             CircleAvatar(
               radius: 20,
               backgroundImage: NetworkImage(
-                  "https://i.pinimg.com/474x/0a/a8/58/0aa8581c2cb0aa948d63ce3ddad90c81.jpg"),
+                  "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png"),
             ),
             SizedBox(
-              width: 20,
+              width: 18,
             ),
             Text("Demo"),
           ],
