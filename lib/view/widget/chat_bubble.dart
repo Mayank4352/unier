@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:unier/utils/colors.dart';
 
 class ChatBubble extends StatelessWidget {
   const ChatBubble({
@@ -25,7 +26,7 @@ class ChatBubble extends StatelessWidget {
         child: DecoratedBox(
           // chat bubble decoration
           decoration: BoxDecoration(
-            color: isUser ? Colors.blue : Colors.grey[300],
+            color: isUser ? AppColors.red : Colors.grey[300],
             borderRadius: BorderRadius.circular(16),
           ),
           child: Padding(
