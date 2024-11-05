@@ -42,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, appRoutes.chatScreen);
                 },
-                child: Text(
+                child: const Text(
                   "Start a new chat",
                   style: TextStyle(color: Colors.white),
                 ))
@@ -50,6 +50,5 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "542184887753",
+    "project_id": "ingish",
+    "storage_bucket": "ingish.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542184887753:android:66f0feccb48a21fac00418",
+        "android_client_info": {
+          "package_name": "unier.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542184887753-lcgsegd2v7iuoeunqj8mo2tcm0lnkqfq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "unier.com",
+            "certificate_hash": "376b05f6ebfd3668e52e32737256e0207abe7ed0"
+          }
+        },
+        {
+          "client_id": "542184887753-002gprab9lr8st1v1auhfe1cbkgds9ps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtpI1YdEyEKy5tSnLlF1wERu5zrRKOtxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542184887753-002gprab9lr8st1v1auhfe1cbkgds9ps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+      
+    }
+  ],
+  "configuration_version": "1"
+}

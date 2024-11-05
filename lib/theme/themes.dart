@@ -4,7 +4,7 @@ import 'package:unier/utils/colors.dart';
 class Themes {
   static ThemeData getLightTheme() {
     return ThemeData(
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         bodyLarge: TextStyle(
             fontSize: 30),
         labelMedium: TextStyle(
@@ -64,7 +64,7 @@ class Themes {
         error: Color(0xFDFF0000),
         onError: Colors.white,
       ),
-      textTheme: TextTheme(
+      textTheme: const TextTheme(
         titleMedium: TextStyle(
             fontSize: 30),
         labelLarge: TextStyle(

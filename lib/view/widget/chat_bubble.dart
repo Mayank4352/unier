@@ -3,10 +3,10 @@ import 'package:unier/utils/colors.dart';
 
 class ChatBubble extends StatelessWidget {
   const ChatBubble({
-    Key? key,
+    super.key,
     required this.text,
     required this.isUser,
-  }) : super(key: key);
+  });
   final String text;
   final bool isUser;
 
