@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, appRoutes.chatScreen);
+                  Navigator.pushNamed(context, AppRoutes.chatScreen);
                 },
                 child: const Text(
                   "Start a new chat",

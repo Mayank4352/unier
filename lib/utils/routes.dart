@@ -1,5 +1,4 @@
-AppRoutes appRoutes = AppRoutes();
-
 class AppRoutes {
-  String chatScreen = 'chatScreen';
+  static const String chatScreen = '/chat';
+  static const String callRoom = '/call-room';
 }

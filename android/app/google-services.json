@@ -2,9 +2,75 @@
   "project_info": {
     "project_number": "542184887753",
     "project_id": "ingish",
-    "storage_bucket": "ingish.appspot.com"
+    "storage_bucket": "ingish.firebasestorage.app"
   },
   "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542184887753:android:dff68cf302db263bc00418",
+        "android_client_info": {
+          "package_name": "com.codem2.unier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542184887753-p09o37slcovmf5bsupbffs6qdofsk21f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codem2.unier",
+            "certificate_hash": "376b05f6ebfd3668e52e32737256e0207abe7ed0"
+          }
+        },
+        {
+          "client_id": "542184887753-002gprab9lr8st1v1auhfe1cbkgds9ps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtpI1YdEyEKy5tSnLlF1wERu5zrRKOtxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542184887753-002gprab9lr8st1v1auhfe1cbkgds9ps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542184887753:android:dd79a5dd8f35d316c00418",
+        "android_client_info": {
+          "package_name": "com.example.unier"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542184887753-002gprab9lr8st1v1auhfe1cbkgds9ps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtpI1YdEyEKy5tSnLlF1wERu5zrRKOtxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542184887753-002gprab9lr8st1v1auhfe1cbkgds9ps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
     {
       "client_info": {
         "mobilesdk_app_id": "1:542184887753:android:66f0feccb48a21fac00418",
@@ -41,7 +107,6 @@
           ]
         }
       }
-      
     }
   ],
   "configuration_version": "1"
