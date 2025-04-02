@@ -1,16 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:unier/firebase_options.dart';
 import 'package:unier/theme/themes.dart';
 import 'package:unier/utils/routes.dart';
 import 'package:unier/view/screen/auth_screen.dart';
-import 'package:unier/view/screen/call_room_screen.dart';
 import 'package:unier/view/screen/chat_screen.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:livekit_client/livekit_client.dart';
-import 'package:unier/bindings/call_binding.dart';
-import 'package:unier/bindings/initial_binding.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,13 +18,13 @@ void main() async {
   // Request permissions for LiveKit
   await requestPermissions();
 
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 Future<void> requestPermissions() async {
   await [
     Permission.microphone,
-Permission.camera, // Add camera permission
+    Permission.camera, // Add camera permission
   ].request();
 }
 

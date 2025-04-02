@@ -32,7 +32,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   FlutterTts flutterTts = FlutterTts();
 
   Future speak(String text) async {
-    var result = await flutterTts.speak(text);
+    await flutterTts.speak(text);
   }
 
   Future<void> changeLanguage(String language) async {
