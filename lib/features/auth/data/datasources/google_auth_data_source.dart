@@ -52,21 +52,6 @@ class GoogleAuthDataSource {
     return user;
   }
 
-  /// Attempts to restore a previous session without showing any UI.
-  Future<User?> restoreSession() async {
-    await initialize();
-    final existing = _firebaseAuth.currentUser;
-    if (existing != null) return existing;
-
-    final account = await _googleSignIn.attemptLightweightAuthentication();
-    final idToken = account?.authentication.idToken;
-    if (idToken == null) return null;
-
-    final credential = GoogleAuthProvider.credential(idToken: idToken);
-    final userCredential = await _firebaseAuth.signInWithCredential(credential);
-    return userCredential.user;
-  }
-
   /// Ends the session on Firebase and on the Google account.
   Future<void> signOut() async {
     await Future.wait<void>(<Future<void>>[

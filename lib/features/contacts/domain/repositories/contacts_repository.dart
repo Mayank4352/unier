@@ -11,4 +11,7 @@ abstract interface class ContactsRepository {
 
   /// Reads every contact, sorted by display name.
   Future<Result<List<PhoneContact>>> getContacts({bool withPhotos});
+
+  /// Opens the OS settings page, for a permanently denied permission.
+  Future<void> openSystemSettings();
 }

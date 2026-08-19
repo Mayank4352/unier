@@ -79,15 +79,6 @@ class AuthRepositoryImpl implements AuthRepository {
     }
   }
 
-  /// Restores a previous session at startup, ignoring any failure: a person who
-  Future<void> restoreSession() async {
-    try {
-      await _dataSource.restoreSession();
-    } on Exception catch (error, stackTrace) {
-      _log.info('No session to restore', error, stackTrace);
-    }
-  }
-
   Failure _translateGoogleException(
     GoogleSignInException error,
     StackTrace stackTrace,

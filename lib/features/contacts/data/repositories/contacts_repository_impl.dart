@@ -61,7 +61,7 @@ class ContactsRepositoryImpl implements ContactsRepository {
     }
   }
 
-  /// Opens the system settings page so a permanent denial can be reversed.
+  @override
   Future<void> openSystemSettings() => _dataSource.openSettings();
 
   PermissionFailure _denied(PermissionStatus status) => PermissionFailure(

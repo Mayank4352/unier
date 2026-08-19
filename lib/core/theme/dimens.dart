@@ -93,6 +93,7 @@ class Dimens extends ThemeExtension<Dimens> {
   double get avatarSize => _avatarSize * scale;
   double get quickDialItemWidth => _quickDialItemWidth * scale;
   double get quickDialSpacing => _spaceXl * scale;
+  double get quickDialColumnWidth => (_quickDialItemWidth + _spaceXl) * scale;
   double get chipHeight => _chipHeight * scale;
   double get listRowHeight => _listRowHeight * scale;
   double get listLeadingWidth => _listLeadingWidth * scale;
