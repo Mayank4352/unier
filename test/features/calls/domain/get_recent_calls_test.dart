@@ -35,10 +35,11 @@ void main() {
     final result = await GetRecentCalls(repository)(null);
 
     expect(result, isA<Ok<List<CallRecord>>>());
-    expect(
-      (result as Ok<List<CallRecord>>).value.map((r) => r.id),
-      <String>['newest', 'older', 'oldest'],
-    );
+    expect((result as Ok<List<CallRecord>>).value.map((r) => r.id), <String>[
+      'newest',
+      'older',
+      'oldest',
+    ]);
   });
 
   test('passes the limit through to the repository', () async {

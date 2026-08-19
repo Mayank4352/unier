@@ -63,7 +63,10 @@ void main() {
   group('timeLabel', () {
     test('shows the clock time for today', () {
       // intl separates the meridiem with a narrow no-break space.
-      expect(record().timeLabel(now).replaceAll(RegExp(r'\s'), ' '), '12:52 PM');
+      expect(
+        record().timeLabel(now).replaceAll(RegExp(r'\s'), ' '),
+        '12:52 PM',
+      );
     });
 
     test('shows Yesterday', () {
