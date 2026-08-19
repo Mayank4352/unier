@@ -59,5 +59,4 @@ class DefaultFirebaseOptions {
     projectId: 'ingish',
     storageBucket: 'ingish.firebasestorage.app',
   );
-
 }
