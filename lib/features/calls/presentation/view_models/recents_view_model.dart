@@ -6,7 +6,7 @@ import '../../../../core/utils/result.dart';
 import '../../domain/entities/call_record.dart';
 import '../../domain/usecases/get_recent_calls.dart';
 
-/// Backs the Recents tab: the full call history.
+// Backs the Recents tab: the full call history.
 class RecentsViewModel extends ChangeNotifier {
   RecentsViewModel({
     required GetRecentCalls getRecentCalls,

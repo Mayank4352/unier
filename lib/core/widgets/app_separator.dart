@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/theme_extensions.dart';
 
-/// Hairline divider between rows of a grouped list.
+// Hairline divider between rows of a grouped list.
 class AppSeparator extends StatelessWidget {
   const AppSeparator({this.indent = 0, super.key});
 

@@ -5,7 +5,7 @@ import '../../../auth/domain/repositories/auth_repository.dart';
 import '../entities/greeting.dart';
 import '../entities/part_of_day.dart';
 
-/// Builds the home screen's date line and salutation.
+// Builds the home screen's date line and salutation.
 final class GetGreeting implements UseCaseNoParams<Greeting> {
   const GetGreeting(this._authRepository, this._clock);
   final AuthRepository _authRepository;

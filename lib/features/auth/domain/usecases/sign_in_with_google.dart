@@ -3,7 +3,7 @@ import '../../../../core/utils/result.dart';
 import '../entities/app_user.dart';
 import '../repositories/auth_repository.dart';
 
-/// Signs the person in with their Google account.
+// Signs the person in with their Google account.
 final class SignInWithGoogle implements UseCaseNoParams<AppUser> {
   const SignInWithGoogle(this._repository);
   final AuthRepository _repository;

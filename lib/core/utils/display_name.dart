@@ -1,4 +1,4 @@
-/// Name-shaping helpers shared by the domain models.
+// Name-shaping helpers shared by the domain models.
 extension DisplayName on String {
   String get givenName {
     final trimmed = trim();

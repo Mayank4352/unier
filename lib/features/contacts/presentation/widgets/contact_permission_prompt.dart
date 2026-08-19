@@ -4,7 +4,7 @@ import '../../../../core/error/failure.dart';
 import '../../../../core/theme/theme_extensions.dart';
 import '../../../../core/widgets/app_card.dart';
 
-/// Explains why Unier needs the address book, and how to grant it.
+// Explains why Unier needs the address book, and how to grant it.
 class ContactPermissionPrompt extends StatelessWidget {
   const ContactPermissionPrompt({
     required this.failure,

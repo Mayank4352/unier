@@ -5,7 +5,7 @@ import '../../../../core/widgets/app_icons.dart';
 import '../../../../core/widgets/app_svg_icon.dart';
 import '../../domain/entities/call_record.dart';
 
-/// Arrow or missed-call glyph at the start of a call-log row.
+// Arrow or missed-call glyph at the start of a call-log row.
 class CallDirectionIcon extends StatelessWidget {
   const CallDirectionIcon({required this.direction, super.key});
 

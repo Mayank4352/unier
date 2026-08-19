@@ -2,7 +2,7 @@ import 'dart:typed_data';
 
 import '../../../../core/utils/display_name.dart';
 
-/// A contact read from the device's address book.
+// A contact read from the device's address book.
 class PhoneContact {
   const PhoneContact({
     required this.id,

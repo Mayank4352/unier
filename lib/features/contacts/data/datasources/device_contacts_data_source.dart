@@ -3,7 +3,7 @@ import 'package:flutter_contacts/flutter_contacts.dart' as device;
 import '../../domain/entities/phone_contact.dart';
 import '../models/phone_contact_mapper.dart';
 
-/// Wraps the address-book plugin and its permission prompt.
+// Wraps the address-book plugin and its permission prompt.
 class DeviceContactsDataSource {
   const DeviceContactsDataSource();
 
@@ -18,7 +18,7 @@ class DeviceContactsDataSource {
   Future<device.PermissionStatus> requestPermission() =>
       device.FlutterContacts.permissions.request(_permission);
 
-  /// Opens the system settings page, for a permanently denied permission.
+  // Opens the system settings page, for a permanently denied permission.
   Future<void> openSettings() =>
       device.FlutterContacts.permissions.openSettings();
 

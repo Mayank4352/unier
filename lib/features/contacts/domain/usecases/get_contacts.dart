@@ -3,7 +3,7 @@ import '../../../../core/utils/result.dart';
 import '../entities/phone_contact.dart';
 import '../repositories/contacts_repository.dart';
 
-/// Reads the device address book, callable contacts first.
+// Reads the device address book, callable contacts first.
 final class GetContacts implements UseCase<List<PhoneContact>, bool> {
   const GetContacts(this._repository);
   final ContactsRepository _repository;

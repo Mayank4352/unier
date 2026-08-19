@@ -4,7 +4,7 @@ import '../../../../core/theme/theme_extensions.dart';
 import '../../../../core/widgets/initials_avatar.dart';
 import '../../domain/entities/phone_contact.dart';
 
-/// One address-book row: avatar, name and primary number.
+// One address-book row: avatar, name and primary number.
 class ContactTile extends StatelessWidget {
   const ContactTile({required this.contact, this.onPressed, super.key});
 

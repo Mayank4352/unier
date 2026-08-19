@@ -10,7 +10,7 @@ import '../view_models/contacts_view_model.dart';
 import '../widgets/contact_permission_prompt.dart';
 import '../widgets/contact_tile.dart';
 
-/// The Contacts tab. Styling follows the home design until its own is ready.
+// The Contacts tab. Styling follows the home design until its own is ready.
 class ContactsView extends StatefulWidget {
   const ContactsView({super.key});
 

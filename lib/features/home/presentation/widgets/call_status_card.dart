@@ -6,7 +6,7 @@ import '../../../../core/widgets/app_icons.dart';
 import '../../../settings/domain/entities/call_settings.dart';
 import 'setting_chip.dart';
 
-/// Availability card with the caption and voice shortcuts.
+// Availability card with the caption and voice shortcuts.
 class CallStatusCard extends StatelessWidget {
   const CallStatusCard({
     required this.settings,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-/// Draws an exported SVG at an explicit size, tinted to a theme colour.
+// Draws an exported SVG at an explicit size, tinted to a theme colour.
 class AppSvgIcon extends StatelessWidget {
   const AppSvgIcon(
     this.asset, {

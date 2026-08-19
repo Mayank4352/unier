@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/theme_extensions.dart';
 
-/// Rounded surface used by every grouped block on a screen.
+// Rounded surface used by every grouped block on a screen.
 class AppCard extends StatelessWidget {
   const AppCard({
     required this.child,

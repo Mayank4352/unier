@@ -14,7 +14,7 @@ import '../view_models/home_view_model.dart';
 import '../widgets/call_status_card.dart';
 import '../widgets/greeting_header.dart';
 
-/// The Home tab.
+// The Home tab.
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
 
@@ -42,7 +42,7 @@ class HomeView extends StatelessWidget {
                 padding: dimens.screenPadding,
                 child: GreetingHeader(greeting: viewModel.greeting),
               ),
-              SizedBox(height: dimens.sectionSpacing),
+              SizedBox(height: dimens.spaceSm),
               Padding(
                 padding: dimens.screenPadding,
                 child: CallStatusCard(settings: viewModel.settings),

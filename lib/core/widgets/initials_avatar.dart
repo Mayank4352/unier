@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/theme_extensions.dart';
 
-/// Circular avatar showing a photo when there is one, initials otherwise.
+// Circular avatar showing a photo when there is one, initials otherwise.
 class InitialsAvatar extends StatelessWidget {
   const InitialsAvatar({
     required this.initials,

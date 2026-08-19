@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/theme/theme_extensions.dart';
 
-/// Held while the stored session is being resolved at start-up.
+// Held while the stored session is being resolved at start-up.
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 

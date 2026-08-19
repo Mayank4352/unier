@@ -3,7 +3,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 import '../../../../core/config/app_config.dart';
 
-/// Talks to Firebase Auth and Google Sign-In.
+// Talks to Firebase Auth and Google Sign-In.
 class GoogleAuthDataSource {
   GoogleAuthDataSource({FirebaseAuth? firebaseAuth, GoogleSignIn? googleSignIn})
     : _firebaseAuth = firebaseAuth ?? FirebaseAuth.instance,
@@ -14,7 +14,7 @@ class GoogleAuthDataSource {
 
   bool _initialized = false;
 
-  /// Prepares the Google Sign-In SDK.
+  // Prepares the Google Sign-In SDK.
   Future<void> initialize() async {
     if (_initialized) return;
     await _googleSignIn.initialize(
@@ -27,7 +27,7 @@ class GoogleAuthDataSource {
   User? get currentUser => _firebaseAuth.currentUser;
   bool get supportsInteractiveSignIn => _googleSignIn.supportsAuthenticate();
 
-  /// Runs the Google account picker and exchanges the ID token for a Firebase
+  // Runs the Google account picker and exchanges the ID token for a Firebase
   Future<User> signInWithGoogle() async {
     await initialize();
 
@@ -52,7 +52,7 @@ class GoogleAuthDataSource {
     return user;
   }
 
-  /// Ends the session on Firebase and on the Google account.
+  // Ends the session on Firebase and on the Google account.
   Future<void> signOut() async {
     await Future.wait<void>(<Future<void>>[
       _firebaseAuth.signOut(),

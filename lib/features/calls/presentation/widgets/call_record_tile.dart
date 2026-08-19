@@ -7,7 +7,7 @@ import '../../domain/entities/call_record.dart';
 import '../formatters/call_record_formatter.dart';
 import 'call_direction_icon.dart';
 
-/// One row of the call log: direction, who, how long, and when.
+// One row of the call log: direction, who, how long, and when.
 class CallRecordTile extends StatelessWidget {
   const CallRecordTile({
     required this.record,
@@ -76,7 +76,7 @@ class CallRecordTile extends StatelessWidget {
   }
 }
 
-/// Duration and caption count, or the missed-call reason.
+// Duration and caption count, or the missed-call reason.
 class _Subtitle extends StatelessWidget {
   const _Subtitle({required this.record});
 

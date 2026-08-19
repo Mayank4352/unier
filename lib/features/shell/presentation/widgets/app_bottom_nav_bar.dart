@@ -6,7 +6,7 @@ import '../../../../core/theme/theme_extensions.dart';
 import '../../../../core/widgets/app_svg_icon.dart';
 import 'nav_destination.dart';
 
-/// Translucent, blurred tab bar pinned to the bottom of the shell.
+// Translucent, blurred tab bar pinned to the bottom of the shell.
 class AppBottomNavBar extends StatelessWidget {
   const AppBottomNavBar({
     required this.destinations,

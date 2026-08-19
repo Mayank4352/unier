@@ -9,7 +9,7 @@ import '../../domain/repositories/auth_repository.dart';
 import '../datasources/google_auth_data_source.dart';
 import '../models/app_user_mapper.dart';
 
-/// [AuthRepository] backed by Firebase Auth and Google Sign-In.
+// AuthRepository backed by Firebase Auth and Google Sign-In.
 class AuthRepositoryImpl implements AuthRepository {
   AuthRepositoryImpl(this._dataSource);
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/theme_extensions.dart';
 
-/// Placeholder shown when a section has nothing to list yet.
+// Placeholder shown when a section has nothing to list yet.
 class EmptyState extends StatelessWidget {
   const EmptyState({required this.message, super.key});
 

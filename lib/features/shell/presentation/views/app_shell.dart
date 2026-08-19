@@ -5,7 +5,7 @@ import '../../../../core/theme/theme_extensions.dart';
 import '../widgets/app_bottom_nav_bar.dart';
 import '../widgets/nav_destination.dart';
 
-/// Scaffold shared by the tabs: each branch keeps its own navigation stack.
+// Scaffold shared by the tabs: each branch keeps its own navigation stack.
 class AppShell extends StatelessWidget {
   const AppShell({required this.navigationShell, super.key});
 

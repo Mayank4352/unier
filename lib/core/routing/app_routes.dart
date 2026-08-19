@@ -1,4 +1,4 @@
-/// Every location in the app, with the paths and names go_router uses.
+// Every location in the app, with the paths and names go_router uses.
 abstract final class AppRoutes {
   static const String splashPath = '/splash';
   static const String splashName = 'splash';

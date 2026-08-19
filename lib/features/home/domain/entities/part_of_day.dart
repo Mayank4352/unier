@@ -1,4 +1,4 @@
-/// The stretch of the day a greeting belongs to.
+// The stretch of the day a greeting belongs to.
 enum PartOfDay {
   morning,
   afternoon,
@@ -8,7 +8,7 @@ enum PartOfDay {
   static const int afternoonStartHour = 12;
   static const int eveningStartHour = 17;
 
-  /// The part of the day that contains [time].
+  // The part of the day that contains time.
   factory PartOfDay.at(DateTime time) {
     final hour = time.hour;
     if (hour >= eveningStartHour || hour < morningStartHour) {

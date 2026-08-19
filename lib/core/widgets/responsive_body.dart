@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/theme_extensions.dart';
 
-/// Caps content at a readable width and centres it on wide windows.
+// Caps content at a readable width and centres it on wide windows.
 class ResponsiveBody extends StatelessWidget {
   const ResponsiveBody({required this.child, super.key});
 

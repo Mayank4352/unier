@@ -4,7 +4,7 @@ import '../../../../core/theme/theme_extensions.dart';
 import '../../../../core/widgets/initials_avatar.dart';
 import '../../domain/entities/quick_dial_entry.dart';
 
-/// Horizontal row of one-tap contacts.
+// Horizontal row of one-tap contacts.
 class QuickDialStrip extends StatelessWidget {
   const QuickDialStrip({required this.entries, this.onEntryPressed, super.key});
 
@@ -31,7 +31,7 @@ class QuickDialStrip extends StatelessWidget {
   }
 }
 
-/// One avatar-and-name column of the [QuickDialStrip].
+// One avatar-and-name column of the QuickDialStrip.
 class QuickDialTile extends StatelessWidget {
   const QuickDialTile({required this.entry, this.onPressed, super.key});
 

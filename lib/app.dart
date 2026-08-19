@@ -8,7 +8,7 @@ import 'core/routing/app_router.dart';
 import 'core/theme/app_theme.dart';
 import 'features/auth/presentation/view_models/auth_view_model.dart';
 
-/// Root widget: installs the dependency graph, then the router.
+// Root widget: installs the dependency graph, then the router.
 class UnierApp extends StatelessWidget {
   const UnierApp({required this.providers, super.key});
 
@@ -43,7 +43,7 @@ class _RoutedAppState extends State<_RoutedApp> {
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light(),
       darkTheme: AppTheme.dark(),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       routerConfig: _router,
       builder: (context, child) => AppResponsiveTheme(child: child!),
     );

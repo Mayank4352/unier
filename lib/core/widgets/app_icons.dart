@@ -1,4 +1,4 @@
-/// Paths of the SVGs exported from the Figma file.
+// Paths of the SVGs exported from the Figma file.
 abstract final class AppIcons {
   static const String _base = 'assets/icons';
 

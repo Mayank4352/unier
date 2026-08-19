@@ -7,7 +7,7 @@ import '../../domain/entities/phone_contact.dart';
 import '../../domain/usecases/get_contacts.dart';
 import '../../domain/usecases/open_contacts_settings.dart';
 
-/// Backs the Contacts tab: the device address book, with a search filter.
+// Backs the Contacts tab: the device address book, with a search filter.
 class ContactsViewModel extends ChangeNotifier {
   ContactsViewModel({
     required GetContacts getContacts,
@@ -27,7 +27,7 @@ class ContactsViewModel extends ChangeNotifier {
   List<PhoneContact> _contacts = const <PhoneContact>[];
   String _query = '';
 
-  /// Contacts matching the current [query].
+  // Contacts matching the current query.
   List<PhoneContact> get contacts {
     final term = _query.trim().toLowerCase();
     if (term.isEmpty) return _contacts;
@@ -48,14 +48,14 @@ class ContactsViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// Set when the person has declined the contacts permission.
+  // Set when the person has declined the contacts permission.
   PermissionFailure? get permissionFailure => load.failure is PermissionFailure
       ? load.failure! as PermissionFailure
       : null;
 
   Future<void> refresh() => load.execute();
 
-  /// Grants access, or opens settings when the denial is permanent.
+  // Grants access, or opens settings when the denial is permanent.
   Future<void> resolvePermission() async {
     if (permissionFailure?.isPermanentlyDenied ?? false) {
       await _openContactsSettings();

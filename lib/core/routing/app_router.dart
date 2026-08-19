@@ -9,7 +9,7 @@ import '../../features/home/presentation/views/home_view.dart';
 import '../../features/shell/presentation/views/app_shell.dart';
 import 'app_routes.dart';
 
-/// Builds the router, redirecting on every change of [authViewModel].
+// Builds the router, redirecting on every change of authViewModel.
 GoRouter createAppRouter(AuthViewModel authViewModel) {
   return GoRouter(
     initialLocation: AppRoutes.homePath,

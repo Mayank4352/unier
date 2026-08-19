@@ -8,8 +8,8 @@ import '../../domain/repositories/quick_dial_repository.dart';
 import '../datasources/call_log_local_data_source.dart';
 import '../datasources/quick_dial_local_data_source.dart';
 
-/// Resolves the quick-dial strip from pinned contacts, falling back to the
-/// people called most often so the strip is never empty without a reason.
+// Resolves the quick-dial strip from pinned contacts, falling back to the
+// people called most often so the strip is never empty without a reason.
 class QuickDialRepositoryImpl implements QuickDialRepository {
   const QuickDialRepositoryImpl(
     this._pinnedDataSource,
@@ -25,7 +25,7 @@ class QuickDialRepositoryImpl implements QuickDialRepository {
   Future<Result<List<QuickDialEntry>>> getQuickDial({int? limit}) async {
     try {
       final pinned = await _resolvePinned();
-      final entries = pinned.isNotEmpty ? pinned : _mostCalled();
+      final entries = pinned.isNotEmpty ? pinned : await _mostCalled();
       return Result.ok(_take(entries, limit));
     } on Exception catch (error, stackTrace) {
       return Result.err(
@@ -59,12 +59,12 @@ class QuickDialRepositoryImpl implements QuickDialRepository {
         .toList(growable: false);
   }
 
-  /// Ranks by call count, then by recency, using the local history only.
-  List<QuickDialEntry> _mostCalled() {
+  // Ranks by call count, then by recency, using the local history only.
+  Future<List<QuickDialEntry>> _mostCalled() async {
     final counts = <String, int>{};
     final latest = <String, CallRecord>{};
 
-    for (final record in _callLogDataSource.read()) {
+    for (final record in await _callLogDataSource.read()) {
       final name = record.contactName;
       counts[name] = (counts[name] ?? 0) + 1;
       final seen = latest[name];

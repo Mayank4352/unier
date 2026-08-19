@@ -1,7 +1,7 @@
 import '../../../../core/storage/key_value_store.dart';
 import '../../domain/entities/call_settings.dart';
 
-/// Reads and writes the caption/voice preferences in local storage.
+// Reads and writes the caption/voice preferences in local storage.
 class CallSettingsLocalDataSource {
   const CallSettingsLocalDataSource(this._store);
 

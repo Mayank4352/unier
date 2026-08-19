@@ -8,7 +8,7 @@ import '../../domain/usecases/sign_in_with_google.dart';
 import '../../domain/usecases/sign_out.dart';
 import '../../domain/usecases/watch_auth_state.dart';
 
-/// Owns the session for the whole app and drives the router's redirect.
+// Owns the session for the whole app and drives the router's redirect.
 class AuthViewModel extends ChangeNotifier {
   AuthViewModel({
     required WatchAuthState watchAuthState,
@@ -36,7 +36,7 @@ class AuthViewModel extends ChangeNotifier {
 
   bool _resolved = false;
 
-  /// True until the first auth event arrives, so the router can hold a splash.
+  // True until the first auth event arrives, so the router can hold a splash.
   bool get isResolving => !_resolved;
 
   bool get isSignedIn => _user != null;

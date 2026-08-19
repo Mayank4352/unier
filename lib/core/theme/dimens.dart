@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'size_class.dart';
 
-/// Every spacing, size and radius used by the app, in one place.
+// Every spacing, size and radius used by the app, in one place.
 @immutable
 class Dimens extends ThemeExtension<Dimens> {
   const Dimens({
@@ -29,7 +29,7 @@ class Dimens extends ThemeExtension<Dimens> {
     maxContentWidth: 720,
   );
 
-  /// Returns the token set for [sizeClass].
+  // Returns the token set for sizeClass.
   factory Dimens.forSizeClass(SizeClass sizeClass) => switch (sizeClass) {
     SizeClass.compact => compact,
     SizeClass.medium => medium,

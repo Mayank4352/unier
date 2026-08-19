@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Semantic colour roles for the Unier design system.
+// Semantic colour roles for the Unier design system.
 @immutable
 class AppColors extends ThemeExtension<AppColors> {
   const AppColors({
@@ -136,7 +136,7 @@ class AppColors extends ThemeExtension<AppColors> {
     );
   }
 
-  /// Builds the Material [ColorScheme] that mirrors this palette, so framework
+  // Builds the Material ColorScheme that mirrors this palette, so framework
   ColorScheme toColorScheme() => ColorScheme(
     brightness: brightness,
     primary: accent,

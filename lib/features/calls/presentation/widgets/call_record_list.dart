@@ -6,7 +6,7 @@ import '../../../../core/widgets/app_separator.dart';
 import '../../domain/entities/call_record.dart';
 import 'call_record_tile.dart';
 
-/// Grouped card of call-log rows, hairline-separated.
+// Grouped card of call-log rows, hairline-separated.
 class CallRecordList extends StatelessWidget {
   const CallRecordList({
     required this.records,

@@ -1,6 +1,6 @@
 import '../../../../core/utils/display_name.dart';
 
-/// A person pinned to the home screen's quick-dial strip.
+// A person pinned to the home screen's quick-dial strip.
 class QuickDialEntry {
   const QuickDialEntry({
     required this.id,

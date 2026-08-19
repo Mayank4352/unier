@@ -1,7 +1,7 @@
 import '../../../../core/routing/app_routes.dart';
 import '../../../../core/widgets/app_icons.dart';
 
-/// One tab of the bottom navigation bar.
+// One tab of the bottom navigation bar.
 class NavDestination {
   const NavDestination({
     required this.label,
@@ -13,7 +13,7 @@ class NavDestination {
   final String iconAsset;
   final String routeName;
 
-  /// The tabs, in the order they appear in the bar.
+  // The tabs, in the order they appear in the bar.
   static const List<NavDestination> all = <NavDestination>[
     NavDestination(
       label: 'Home',

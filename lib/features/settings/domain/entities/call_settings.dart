@@ -1,4 +1,4 @@
-/// The caption and voice preferences surfaced on the home screen's status card.
+// The caption and voice preferences surfaced on the home screen's status card.
 class CallSettings {
   const CallSettings({
     required this.captionsEnabled,
@@ -15,7 +15,7 @@ class CallSettings {
   final String voiceName;
   final bool readyForCalls;
 
-  /// A copy with the given fields replaced.
+  // A copy with the given fields replaced.
   CallSettings copyWith({
     bool? captionsEnabled,
     String? voiceName,

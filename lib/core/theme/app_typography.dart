@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// The app's type ramp.
+// The app's type ramp.
 @immutable
 class AppTypography extends ThemeExtension<AppTypography> {
   const AppTypography({
@@ -20,7 +20,7 @@ class AppTypography extends ThemeExtension<AppTypography> {
     required this.navLabel,
   });
 
-  /// Builds the ramp at [scale], where 1 is the Figma frame's native scale.
+  // Builds the ramp at scale, where 1 is the Figma frame's native scale.
   factory AppTypography.scaled(double scale) {
     TextStyle style({
       required double size,
@@ -100,7 +100,7 @@ class AppTypography extends ThemeExtension<AppTypography> {
   final TextStyle listTrailing;
   final TextStyle navLabel;
 
-  /// Maps the ramp onto Material's [TextTheme] so framework widgets inherit it.
+  // Maps the ramp onto Material's TextTheme so framework widgets inherit it.
   TextTheme toTextTheme() => TextTheme(
     displaySmall: greetingTitle,
     headlineSmall: greetingTitle,

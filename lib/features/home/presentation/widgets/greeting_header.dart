@@ -4,7 +4,7 @@ import '../../../../core/theme/theme_extensions.dart';
 import '../../domain/entities/greeting.dart';
 import '../formatters/greeting_formatter.dart';
 
-/// Date line and salutation at the top of the home screen.
+// Date line and salutation at the top of the home screen.
 class GreetingHeader extends StatelessWidget {
   const GreetingHeader({required this.greeting, super.key});
 

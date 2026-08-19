@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import '../../domain/entities/call_record.dart';
 
-/// JSON form of a [CallRecord], as stored on the device.
+// JSON form of a CallRecord, as stored on the device.
 abstract final class CallRecordDto {
   static const String _id = 'id';
   static const String _name = 'name';
@@ -22,8 +22,8 @@ abstract final class CallRecordDto {
     _phoneNumber: record.phoneNumber,
   });
 
-  /// Returns `null` when the stored entry cannot be read, so one bad row does
-  /// not take the whole call log down with it.
+  // Returns `null` when the stored entry cannot be read, so one bad row does
+  // not take the whole call log down with it.
   static CallRecord? decode(String source) {
     try {
       final json = jsonDecode(source) as Map<String, dynamic>;

@@ -1,9 +1,9 @@
 import '../../../../core/utils/display_name.dart';
 
-/// Which way a call went, and whether it connected.
+// Which way a call went, and whether it connected.
 enum CallDirection { incoming, outgoing, missed }
 
-/// One row of the call log.
+// One row of the call log.
 class CallRecord {
   const CallRecord({
     required this.id,

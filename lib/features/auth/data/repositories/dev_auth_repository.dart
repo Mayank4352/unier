@@ -3,10 +3,10 @@ import '../../../../core/utils/result.dart';
 import '../../domain/entities/app_user.dart';
 import '../../domain/repositories/auth_repository.dart';
 
-/// Always-signed-in stand-in used when `--dart-define=DEV_AUTH=true`.
-///
-/// Swapping the repository at the composition root keeps the bypass out of the
-/// router and the view models entirely.
+// Always-signed-in stand-in used when `--dart-define=DEV_AUTH=true`.
+//
+// Swapping the repository at the composition root keeps the bypass out of the
+// router and the view models entirely.
 class DevAuthRepository implements AuthRepository {
   static const AppUser _user = AppUser(
     id: 'dev-user',

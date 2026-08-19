@@ -16,7 +16,7 @@ import '../../../settings/domain/usecases/get_call_settings.dart';
 import '../../domain/entities/greeting.dart';
 import '../../domain/usecases/get_greeting.dart';
 
-/// Backs the home screen: greeting, status card, quick dial and recent calls.
+// Backs the home screen: greeting, status card, quick dial and recent calls.
 class HomeViewModel extends ChangeNotifier {
   HomeViewModel({
     required GetGreeting getGreeting,
@@ -56,7 +56,7 @@ class HomeViewModel extends ChangeNotifier {
   CallSettings _settings = CallSettings.defaults;
   CallSettings get settings => _settings;
 
-  /// Reference time for relative labels such as "Yesterday".
+  // Reference time for relative labels such as "Yesterday".
   DateTime get now => _clock.now();
 
   Future<void> refresh() => load.execute();

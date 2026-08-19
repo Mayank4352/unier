@@ -3,13 +3,13 @@ import '../../../../core/utils/result.dart';
 import '../entities/call_record.dart';
 import '../repositories/call_log_repository.dart';
 
-/// How many recent calls each surface asks for.
+// How many recent calls each surface asks for.
 abstract final class RecentCallsLimit {
   static const int homePreview = 4;
   static const int? full = null;
 }
 
-/// Reads the call history, newest first.
+// Reads the call history, newest first.
 final class GetRecentCalls implements UseCase<List<CallRecord>, int?> {
   const GetRecentCalls(this._repository);
   final CallLogRepository _repository;

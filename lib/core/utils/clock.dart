@@ -1,10 +1,10 @@
-/// The current time, behind an interface.
+// The current time, behind an interface.
 abstract interface class Clock {
-  /// The current local time.
+  // The current local time.
   DateTime now();
 }
 
-/// A [Clock] backed by the system clock.
+// A Clock backed by the system clock.
 final class SystemClock implements Clock {
   const SystemClock();
 
@@ -12,7 +12,7 @@ final class SystemClock implements Clock {
   DateTime now() => DateTime.now();
 }
 
-/// A [Clock] frozen at a fixed instant, for tests.
+// A Clock frozen at a fixed instant, for tests.
 final class FixedClock implements Clock {
   const FixedClock(this._instant);
   final DateTime _instant;

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/theme/theme_extensions.dart';
 import '../../../../core/widgets/app_svg_icon.dart';
 
-/// Rounded chip pairing an icon with a caption and its current value.
+// Rounded chip pairing an icon with a caption and its current value.
 class SettingChip extends StatelessWidget {
   const SettingChip({
     required this.iconAsset,

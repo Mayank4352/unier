@@ -1,6 +1,6 @@
 import '../../../../core/utils/display_name.dart';
 
-/// The signed-in person.
+// The signed-in person.
 class AppUser {
   const AppUser({
     required this.id,

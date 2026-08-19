@@ -4,7 +4,7 @@ import '../theme/theme_extensions.dart';
 import 'app_icons.dart';
 import 'app_svg_icon.dart';
 
-/// Grey caption above a section, with an optional trailing action.
+// Grey caption above a section, with an optional trailing action.
 class SectionHeader extends StatelessWidget {
   const SectionHeader({
     required this.title,
@@ -39,7 +39,7 @@ class SectionHeader extends StatelessWidget {
   }
 }
 
-/// The "See all >" affordance at the end of a [SectionHeader].
+// The "See all >" affordance at the end of a SectionHeader.
 class SectionHeaderAction extends StatelessWidget {
   const SectionHeaderAction({required this.label, this.onPressed, super.key});
 

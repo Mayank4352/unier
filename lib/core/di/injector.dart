@@ -36,14 +36,14 @@ import '../storage/key_value_store.dart';
 import '../storage/shared_preferences_store.dart';
 import '../utils/clock.dart';
 
-/// Composition root: data sources, then repositories, use cases, view models.
+// Composition root: data sources, then repositories, use cases, view models.
 abstract final class Injector {
   static Future<List<SingleChildWidget>> resolve() async {
     final store = await SharedPreferencesStore.open();
     return providers(store);
   }
 
-  /// Split out so tests can pass an [InMemoryKeyValueStore].
+  // Split out so tests can pass an InMemoryKeyValueStore.
   static List<SingleChildWidget> providers(KeyValueStore store) {
     return <SingleChildWidget>[
       Provider<KeyValueStore>.value(value: store),
@@ -74,8 +74,7 @@ abstract final class Injector {
         create: (context) => ContactsRepositoryImpl(context.read()),
       ),
       Provider<CallLogRepository>(
-        create: (context) =>
-            CallLogRepositoryImpl(context.read(), context.read()),
+        create: (context) => CallLogRepositoryImpl(context.read()),
       ),
       Provider<QuickDialRepository>(
         create: (context) => QuickDialRepositoryImpl(

@@ -7,7 +7,7 @@ import '../../../../core/theme/theme_extensions.dart';
 import '../../../../core/widgets/responsive_body.dart';
 import '../view_models/auth_view_model.dart';
 
-/// Google sign-in. Restyled once its design lands.
+// Google sign-in. Restyled once its design lands.
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 

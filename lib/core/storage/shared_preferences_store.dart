@@ -2,11 +2,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'key_value_store.dart';
 
-/// [KeyValueStore] backed by `shared_preferences`.
+// KeyValueStore backed by `shared_preferences`.
 class SharedPreferencesStore implements KeyValueStore {
   const SharedPreferencesStore(this._preferences);
 
-  /// Opens the platform store. Call once during start-up.
+  // Opens the platform store. Call once during start-up.
   static Future<SharedPreferencesStore> open() async =>
       SharedPreferencesStore(await SharedPreferences.getInstance());
 
@@ -37,7 +37,7 @@ class SharedPreferencesStore implements KeyValueStore {
   Future<void> remove(String key) => _preferences.remove(key);
 }
 
-/// An in-memory [KeyValueStore], for tests and previews.
+// An in-memory KeyValueStore, for tests and previews.
 class InMemoryKeyValueStore implements KeyValueStore {
   final Map<String, Object> _values = <String, Object>{};
 

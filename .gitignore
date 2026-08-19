@@ -46,3 +46,6 @@ app.*.map.json
 
 # Claude Code
 .claude/
+
+# FlutterFire generates this; the native config files are the source of truth.
+lib/firebase_options.dart

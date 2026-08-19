@@ -9,7 +9,7 @@ import '../../../../core/widgets/section_header.dart';
 import '../view_models/recents_view_model.dart';
 import '../widgets/call_record_list.dart';
 
-/// The Recents tab. Styling follows the home design until its own is ready.
+// The Recents tab. Styling follows the home design until its own is ready.
 class RecentsView extends StatelessWidget {
   const RecentsView({super.key});
 
@@ -53,6 +53,14 @@ class RecentsView extends StatelessWidget {
                     SizedBox(height: dimens.sectionHeaderSpacing),
                     if (failure != null)
                       FailureView(failure: failure, onRetry: viewModel.refresh)
+                    else if (viewModel.load.running &&
+                        viewModel.records.isEmpty)
+                      Padding(
+                        padding: EdgeInsets.symmetric(vertical: dimens.spaceXl),
+                        child: const Center(
+                          child: CircularProgressIndicator.adaptive(),
+                        ),
+                      )
                     else if (viewModel.records.isEmpty)
                       const EmptyState(
                         message: 'Calls you make and receive will appear here.',

@@ -1,6 +1,6 @@
 import '../error/failure.dart';
 
-/// Wraps the outcome of an operation that can fail.
+// Wraps the outcome of an operation that can fail.
 sealed class Result<T> {
   const Result();
 
@@ -21,14 +21,14 @@ sealed class Result<T> {
     Err<T>(:final failure) => failure,
   };
 
-  /// Applies [transform] to the value of an [Ok], passing an [Err] through.
+  // Applies transform to the value of an Ok, passing an Err through.
   Result<R> map<R>(R Function(T value) transform) => switch (this) {
     Ok<T>(:final value) => Result<R>.ok(transform(value)),
     Err<T>(:final failure) => Result<R>.err(failure),
   };
 }
 
-/// A successful [Result].
+// A successful Result.
 final class Ok<T> extends Result<T> {
   const Ok._(this.value);
   final T value;
@@ -37,7 +37,7 @@ final class Ok<T> extends Result<T> {
   String toString() => 'Ok<$T>($value)';
 }
 
-/// A failed [Result].
+// A failed Result.
 final class Err<T> extends Result<T> {
   const Err._(this.failure);
   final Failure failure;

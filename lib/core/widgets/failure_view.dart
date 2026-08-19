@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../error/failure.dart';
 import '../theme/theme_extensions.dart';
 
-/// Inline message shown when a section could not load.
+// Inline message shown when a section could not load.
 class FailureView extends StatelessWidget {
   const FailureView({required this.failure, this.onRetry, super.key});
 

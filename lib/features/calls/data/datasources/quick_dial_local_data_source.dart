@@ -1,6 +1,6 @@
 import '../../../../core/storage/key_value_store.dart';
 
-/// Stores which contacts are pinned to the quick-dial strip.
+// Stores which contacts are pinned to the quick-dial strip.
 class QuickDialLocalDataSource {
   const QuickDialLocalDataSource(this._store);
 
