@@ -1,24 +1,26 @@
 import 'package:flutter_contacts/flutter_contacts.dart' as device;
-import 'package:permission_handler/permission_handler.dart';
 
 import '../../domain/entities/phone_contact.dart';
 import '../models/phone_contact_mapper.dart';
 
-/// Wraps the address-book plugin and the OS permission prompt.
+/// Wraps the address-book plugin and its permission prompt.
 class DeviceContactsDataSource {
   const DeviceContactsDataSource();
 
-  Future<PermissionStatus> permissionStatus() => Permission.contacts.status;
+  static const device.PermissionType _permission = device.PermissionType.read;
 
-  Future<bool> hasPermission() async {
-    final status = await permissionStatus();
-    return status.isGranted || status.isLimited;
-  }
+  Future<device.PermissionStatus> permissionStatus() =>
+      device.FlutterContacts.permissions.check(_permission);
 
-  Future<PermissionStatus> requestPermission() => Permission.contacts.request();
+  Future<bool> hasPermission() =>
+      device.FlutterContacts.permissions.has(_permission);
+
+  Future<device.PermissionStatus> requestPermission() =>
+      device.FlutterContacts.permissions.request(_permission);
 
   /// Opens the system settings page, for a permanently denied permission.
-  Future<bool> openSettings() => openAppSettings();
+  Future<void> openSettings() =>
+      device.FlutterContacts.permissions.openSettings();
 
   Future<List<PhoneContact>> fetchContacts({required bool withPhotos}) async {
     final contacts = await device.FlutterContacts.getAll(
