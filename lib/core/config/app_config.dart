@@ -15,4 +15,13 @@ abstract final class AppConfig {
     'SEED_SAMPLE_CALL_LOG',
     defaultValue: kDebugMode,
   );
+
+  /// Skips Google sign-in and runs as [devUserName]. Never on in release.
+  static const bool useDevAuth =
+      bool.fromEnvironment('DEV_AUTH') && !kReleaseMode;
+
+  static const String devUserName = String.fromEnvironment(
+    'DEV_AUTH_NAME',
+    defaultValue: 'Andu',
+  );
 }

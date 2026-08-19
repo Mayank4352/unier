@@ -3,6 +3,7 @@ import 'package:provider/single_child_widget.dart';
 
 import '../../features/auth/data/datasources/google_auth_data_source.dart';
 import '../../features/auth/data/repositories/auth_repository_impl.dart';
+import '../../features/auth/data/repositories/dev_auth_repository.dart';
 import '../../features/auth/domain/repositories/auth_repository.dart';
 import '../../features/auth/domain/usecases/sign_in_with_google.dart';
 import '../../features/auth/domain/usecases/sign_out.dart';
@@ -30,6 +31,7 @@ import '../../features/settings/data/repositories/call_settings_repository_impl.
 import '../../features/settings/domain/repositories/call_settings_repository.dart';
 import '../../features/settings/domain/usecases/get_call_settings.dart';
 import '../../features/settings/domain/usecases/save_call_settings.dart';
+import '../config/app_config.dart';
 import '../storage/key_value_store.dart';
 import '../storage/shared_preferences_store.dart';
 import '../utils/clock.dart';
@@ -64,7 +66,9 @@ abstract final class Injector {
 
       // Repositories.
       Provider<AuthRepository>(
-        create: (context) => AuthRepositoryImpl(context.read()),
+        create: (context) => AppConfig.useDevAuth
+            ? DevAuthRepository()
+            : AuthRepositoryImpl(context.read()),
       ),
       Provider<ContactsRepository>(
         create: (context) => ContactsRepositoryImpl(context.read()),
